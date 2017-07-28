@@ -6,13 +6,17 @@ http://www.softantenna.com/wp/software/5-programming-problems/#5
 例えば、1 + 2 + 34 – 5 + 67 – 8 + 9 = 100となる。
 =end
 
-nums = *1..9
-ops = ['+', '-', '']
+def exp100
+    nums = *1..9
+    ops = ['+', '-', '']
 
-puts nums.inject { |memo, n|
-    ops.map { |op| 
-        Array(memo).map { |pat| 
-            "#{pat}#{op}#{n}"
-        }
-    }.flatten
-}.select {|exp| eval(exp) == 100}
+    nums.inject { |memo, n|
+        ops.map { |op| 
+            Array(memo).map { |pat| 
+                "#{pat}#{op}#{n}"
+            }
+        }.flatten
+    }.select {|exp| eval(exp) == 100}
+end
+
+puts exp100

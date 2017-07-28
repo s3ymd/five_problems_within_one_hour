@@ -4,31 +4,37 @@ http://www.softantenna.com/wp/software/5-programming-problems/#1
 forループ、whileループ、および再帰を使用して、リスト内の数字の合計を計算する3つの関数を記述せよ。
 =end
 
-list = *1..10
-
 # for loop
-sum = 0
-for i in list
-    sum += i
+def sum_for(list)
+    sum = 0
+    for i in list
+        sum += i
+    end
+    sum
 end
-p sum
 
 # while loop
-sum = 0
-i = 0
-while i < list.size
-    sum += i.next
-    i += 1
+def sum_while(list)
+    sum = 0
+    i = 0
+    while i < list.size
+        sum += i.next
+        i += 1
+    end
+    sum
 end
-p sum
 
 # recursion
-def sum(nums, result = 0) 
+def sum_recursion(nums, result = 0) 
     if nums.empty?
         result
     else
         first, *rest = nums
-        sum(rest, result + first)
+        sum_recursion(rest, result + first)
     end
 end
-p sum(list)
+
+list = *1..10
+p sum_for(list)
+p sum_while(list)
+p sum_recursion(list)
