@@ -34,7 +34,7 @@ def sum_recursion(nums, result = 0)
     end
 end
 
-list = *1..10
-p sum_for(list)
-p sum_while(list)
-p sum_recursion(list)
+# list = *1..10
+# p sum_for(list)
+# p sum_while(list)
+# p sum_recursion(list)

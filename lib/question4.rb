@@ -9,6 +9,6 @@ def max(nums)
     nums.permutation.map {|nums|nums.join.to_i}.max
 end
 
-list = [50, 2, 1, 9]
-p max(list)
+# list = [50, 2, 1, 9]
+# p max(list)
 

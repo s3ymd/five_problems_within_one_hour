@@ -23,5 +23,5 @@ def fib
     Fib.new.to_enum
 end
 
-puts fib.take(100)
+# puts fib.take(100)
 

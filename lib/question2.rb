@@ -14,6 +14,6 @@ def zip(l1, l2)
         [l1.first, l2.first, *zip(l1.drop(1), l2.drop(1))]
     end
 end
-p zip(%w(a b c), %w(1 2 3))
-p zip(%w(a b c d), %w(1 2 3))
-p zip(%w(a b c), %w(1 2 3 4))
+# p zip(%w(a b c), %w(1 2 3))
+# p zip(%w(a b c d), %w(1 2 3))
+# p zip(%w(a b c), %w(1 2 3 4))

@@ -19,4 +19,4 @@ def exp100
     }.select {|exp| eval(exp) == 100}
 end
 
-puts exp100
+# puts exp100
