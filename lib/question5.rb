@@ -16,10 +16,21 @@
 #   end.select { |exp| eval(exp) == 100 }
 # end
 
+# def exp100
+#   ops = ['+', '-', '']
+#   [*2..9]
+#     .inject([[1]]) { |a, b| a << ops << [b] }
+#     .inject(&:product)
+#     .map(&:flatten)
+#     .map(&:join)
+#     .select { |e| eval(e) == 100 }
+# end
+
 def exp100
   ops = ['+', '-', '']
-  [*2..9]
-    .inject([[1]]) { |a, b| a << ops << [b] }
+  [*1..9]
+    .flat_map { |n| [[n], ops] }
+    .tap(&:pop)
     .inject(&:product)
     .map(&:flatten)
     .map(&:join)
