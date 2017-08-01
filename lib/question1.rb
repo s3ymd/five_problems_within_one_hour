@@ -18,7 +18,7 @@ def sum_while(list)
     sum = 0
     i = 0
     while i < list.size
-        sum += i.next
+        sum += list[i]
         i += 1
     end
     sum
